@@ -2,7 +2,7 @@ import express from 'express';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import passport from 'passport';
-import { config } from '../config.js';
+import { config } from '../src/config.js';
 import './auth/oauth.js'; // Inicializa estrategias Passport
 
 import authRoutes from './routes/auth.js';
