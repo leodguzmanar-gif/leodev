@@ -1,12 +1,12 @@
 import { Router } from 'express';
 import passport from 'passport';
-import { prisma } from '../db.js';
-import { signToken } from '../auth/jwt.js';
-import { setAuthCookie, clearAuthCookie } from '../auth/cookies.js';
-import { requireAuth, optionalAuth } from '../auth/middleware.js';
-import { hashPassword, verifyPassword, createResetToken, consumeResetToken } from '../auth/password.js';
+import { prisma } from '../src/db.js';
+import { signToken } from '../src/auth/jwt.js';
+import { setAuthCookie, clearAuthCookie } from '../src/auth/cookies.js';
+import { requireAuth, optionalAuth } from '../src/auth/middleware.js';
+import { hashPassword, verifyPassword, createResetToken, consumeResetToken } from '../src/auth/password.js';
 import { sendResetEmail } from '../mail/send.js';
-import { config } from '../config.js';
+import { config } from '../src/config.js';
 
 const router = Router();
 
