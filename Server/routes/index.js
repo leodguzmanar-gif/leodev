@@ -3,11 +3,11 @@ import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import passport from 'passport';
 import { config } from '../src/config.js';
-import './auth/oauth.js'; // Inicializa estrategias Passport
+import '../src/auth/oauth.js'; // Inicializa estrategias Passport
 
-import authRoutes from './routes/auth.js';
-import laboratoryRoutes from './routes/laboratory.js';
-import projectsRoutes from './routes/projects.js';
+import authRoutes from './auth.js';
+import laboratoryRoutes from './laboratory.js';
+import projectsRoutes from './projects.js';
 
 const app = express();
 
