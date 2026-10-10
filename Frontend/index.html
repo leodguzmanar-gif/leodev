@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050a06" />
+  <title>Canvas Topográfico</title>
+
+  <!-- Anti-FLASH: aplicar tema antes de pintar -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t !== 'light' && t !== 'dark') {
+          t = window.matchMedia &&
+              window.matchMedia('(prefers-color-scheme: light)').matches
+            ? 'light' : 'dark';
+        }
+        document.documentElement.classList.add('theme-' + t);
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="./src/logo.png">
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="./theme.js"></script>
+
+  <script src="./src/component/topographic.js"></script>
+  <script src="./src/component/TopographicCanvas.js"></script>
+
+  <script src="./src/component/utils/useVisible.js"></script>
+
+  <script src="./router.js"></script>
+
+  <script src="./src/component/ThemeToggle.js"></script>
+  <script src="./src/component/Search.js"></script>
+  <script src="./src/component/Navbar.js"></script>
+  <script src="./src/component/Footer.js"></script>
+  <script src="./src/component/Logo.js"></script>
+
+  <script src="./pages/home.js"></script>
+  <script src="./pages/laboratory.js"></script>
+  <script src="./pages/projects.js"></script>
+  <script src="./pages/contact.js"></script>
+
+  <!-- 7) App -->
+  <script src="./app.js"></script>
+</body>
+</html>
