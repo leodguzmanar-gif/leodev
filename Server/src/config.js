@@ -1,7 +1,7 @@
 import 'dotenv/config';
 
 export const config = {
-  port: process.env.PORT || 10000, // Render usa 10000 por defecto
+  port: process.env.PORT || 10000,
   jwt: {
     secret: process.env.JWT_SECRET,
     expiresIn: process.env.JWT_EXPIRES_IN || '7d',
@@ -11,10 +11,10 @@ export const config = {
     secure: process.env.COOKIE_SECURE === 'true',
     sameSite: process.env.COOKIE_SAME_SITE || 'None',
     domain: process.env.COOKIE_DOMAIN,
-    maxAge: 7 * 24 * 60 * 60 * 1000, // 7 días
+    maxAge: 7 * 24 * 60 * 60 * 1000,
   },
   cors: {
-    origin: process.env.CORS_ORIGIN, // ej: https://tu-usuario.github.io
+    origin: process.env.CORS_ORIGIN,
     credentials: true,
   },
   oauth: {
@@ -29,12 +29,12 @@ export const config = {
       callbackURL: process.env.GITHUB_CALLBACK_URL,
     },
   },
-  smtp: {
-    host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT),
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
-    from: process.env.SMTP_FROM,
+  // ─── Gmail API (para enviar correos) ───
+  gmail: {
+    clientId: process.env.GOOGLE_CLIENT_ID,
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    refreshToken: process.env.GOOGLE_REFRESH_TOKEN,
+    user: process.env.GOOGLE_USER,
   },
   frontendUrl: process.env.FRONTEND_URL,
 };
