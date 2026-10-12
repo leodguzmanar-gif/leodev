@@ -142,7 +142,7 @@
 
           React.createElement(
             'a',
-            { className: 'logo logo-desktop', href: '/' },
+            { className: 'logo logo-desktop', href: '/leodev/' },
             React.createElement(window.Logo, null)
           )
         ),

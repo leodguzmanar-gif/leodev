@@ -136,20 +136,20 @@
     const channels = [
       {
         label: 'Email',
-        value: 'hola@ejemplo.com',
-        href: 'mailto:hola@ejemplo.com',
+        value: 'leodguzman@gmail.com',
+        href: 'mailto:leodguzman@gmail.com',
         icon: '✉',
       },
       {
         label: 'GitHub',
-        value: '@leonardoguzman',
-        href: 'https://github.com/',
+        value: '@leodguzmanar-gif',
+        href: 'https://github.com/leodguzmanar-gif',
         icon: '◆',
       },
       {
         label: 'LinkedIn',
         value: '/in/leonardoguzman',
-        href: 'https://linkedin.com/',
+        href: 'www.linkedin.com/in/leonardo-guzmán-32a6032a8',
         icon: '▣',
       },
       {
